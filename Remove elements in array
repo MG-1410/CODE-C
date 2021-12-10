@@ -1,0 +1,34 @@
+#include <stdio.h>
+int main()
+{
+    int arr[20],n,val;
+    printf("Enter the Size of  Array : ");
+    scanf("%d",&n);
+    printf("Enter the Elements of Array : ");
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    printf("Enter the value to be Removed: ");
+    scanf("%d",&val);
+    removeElements(arr,n,val);
+}
+
+int removeElements(int* arr,int n,int val)
+{
+        for(int i=0;i<n;i++)
+        {
+                 if(arr[i]==val)
+                {
+                    arr[i]=-100;
+                }
+         }
+         printf("The new array is: ");
+         for(int i=0;i<n;i++)
+         {
+             if(arr[i]!=-100)
+             printf("%d ",arr[i]);
+         }
+
+}
+
